@@ -1,0 +1,29 @@
+#!/bin/bash
+#SBATCH -N 1 
+#SBATCH -n 4
+#SBATCH --gpus=2
+#SBATCH -p qTRDGPUL
+#SBATCH -t 60
+#SBATCH -J msalman
+#SBATCH -e slurm/error%A.err
+#SBATCH -o slurm/out%A.out
+#SBATCH -A PSYC0002
+#SBATCH --oversubscribe 
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=msalman@gsu.edu
+
+sleep 10s
+
+export OMP_NUM_THREADS=1
+export MODULEPATH=/apps/Compilers/modules-3.2.10/Debug-Build/Modules/3.2.10/modulefiles/ 
+echo $HOSTNAME
+
+# activate conda
+source /data/mialab/users/salman/tools/miniconda3/bin/activate
+conda activate py37
+
+srun -A PSYC0002 -p qTRDGPUL -l -n2 --gpus=1 python mnist.py &
+srun -A PSYC0002 -p qTRDGPUL -l -n2 --gpus=1 python mnist.py &
+
+sleep 30s
+

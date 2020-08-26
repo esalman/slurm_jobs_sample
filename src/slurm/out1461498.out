@@ -1,0 +1,111 @@
+trendscn007.rs.gsu.edu
+MATLAB is selecting SOFTWARE OPENGL rendering.
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 4).
+ans = 
+ Pool with properties: 
+
+            Connected: true
+           NumWorkers: 4
+              Cluster: local
+        AttachedFiles: {}
+    AutoAddClientPath: true
+          IdleTimeout: 30 minutes (30 minutes remaining)
+          SpmdEnabled: true
+evaluating CalinskiHarabasz for K=2
+cvi = 3.8406
+evaluating CalinskiHarabasz for K=6
+cvi = 36.9465
+evaluating CalinskiHarabasz for K=3
+cvi = 6.2209
+evaluating CalinskiHarabasz for K=7
+cvi = 36.2087
+evaluating CalinskiHarabasz for K=4
+cvi = 6.2209
+evaluating CalinskiHarabasz for K=8
+cvi = 37.1608
+evaluating CalinskiHarabasz for K=5
+cvi = 6.2209
+evaluating CalinskiHarabasz for K=9
+cvi = 6.2209
+evaluating CalinskiHarabasz for K=10
+cvi = 39.518
+evaluating CalinskiHarabasz for K=14
+cvi = 55.3995
+evaluating CalinskiHarabasz for K=13
+cvi = 55.9149
+evaluating CalinskiHarabasz for K=12
+cvi = 56.2036
+evaluating CalinskiHarabasz for K=11
+cvi = 55.198
+evaluating DaviesBouldin for K=3
+cvi = 0.92802
+evaluating DaviesBouldin for K=4
+cvi = 0.92802
+evaluating DaviesBouldin for K=5
+cvi = 0.92802
+evaluating DaviesBouldin for K=2
+cvi = 1.2204
+evaluating DaviesBouldin for K=6
+cvi = 2.7868
+evaluating DaviesBouldin for K=14
+cvi = 3.6386
+evaluating DaviesBouldin for K=13
+cvi = 3.6558
+evaluating DaviesBouldin for K=7
+cvi = 2.8774
+evaluating DaviesBouldin for K=11
+cvi = 3.6433
+evaluating DaviesBouldin for K=8
+cvi = 2.7799
+evaluating DaviesBouldin for K=12
+cvi = 3.6552
+evaluating DaviesBouldin for K=9
+cvi = 0.92802
+evaluating DaviesBouldin for K=10
+cvi = 2.812
+evaluating silhouette for K=4
+cvi = 0.20141
+evaluating silhouette for K=2
+cvi = -0.0098087
+evaluating silhouette for K=6
+cvi = 0.082142
+evaluating silhouette for K=14
+cvi = 0.090633
+evaluating silhouette for K=13
+cvi = 0.088198
+evaluating silhouette for K=3
+cvi = 0.20141
+evaluating silhouette for K=7
+cvi = 0.083854
+evaluating silhouette for K=12
+cvi = 0.088754
+evaluating silhouette for K=8
+cvi = 0.082794
+evaluating silhouette for K=10
+cvi = 0.086449
+evaluating silhouette for K=5
+cvi = 0.20141
+evaluating silhouette for K=9
+cvi = 0.20141
+evaluating silhouette for K=11
+cvi = 0.090194
+Elapsed time is 1.445276 seconds.
+[Warning: MATLAB has disabled some advanced graphics rendering features by
+switching to software OpenGL. For more information, click <a
+href="matlab:opengl('problems')">here</a>.] 
+[Warning: The JavaFrame figure property will be removed in a future release. For
+more information, see <a
+href="https://www.mathworks.com/pi_app_designer_R2019b_javaframe">Recommendations
+for Java and ActiveX Users</a> on mathworks.com.] 
+[> In export_fig (line 310)
+  In parpool_example (line 44)] 
+[Warning: MATLAB cannot use OpenGL for printing when started with the
+'-nodisplay' option.] 
+[> In inputcheck
+  In print (line 41)
+  In print2array>read_tif_img (line 226)
+  In print2array (line 180)
+  In export_fig (line 606)
+  In parpool_example (line 44)] 
+DONE!

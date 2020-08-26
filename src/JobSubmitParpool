@@ -1,0 +1,26 @@
+#!/bin/bash
+#SBATCH -N 1 
+#SBATCH -n 1
+#SBATCH -c 4
+#SBATCH --mem=10g
+#SBATCH -p qTRD
+#SBATCH -t 60
+#SBATCH -J msalman
+#SBATCH -e slurm/error%A.err
+#SBATCH -o slurm/out%A.out
+#SBATCH -A PSYC0002
+#SBATCH --oversubscribe 
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=msalman@gsu.edu
+
+sleep 10s
+
+export OMP_NUM_THREADS=1
+export MODULEPATH=/apps/Compilers/modules-3.2.10/Debug-Build/Modules/3.2.10/modulefiles/ 
+echo $HOSTNAME
+
+module load Framework/Matlab2019b
+matlab -batch parpool_example
+
+sleep 10s
+

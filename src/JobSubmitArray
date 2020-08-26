@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH -N 1 
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --mem=1g
+#SBATCH -p qTRD
+#SBATCH -t 60
+#SBATCH -J msalman
+#SBATCH -e slurm/error%A-%a.err
+#SBATCH -o slurm/out%A-%a.out
+#SBATCH -A PSYC0002
+#SBATCH --oversubscribe 
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=msalman@gsu.edu
+
+export OMP_NUM_THREADS=1
+export MODULEPATH=/apps/Compilers/modules-3.2.10/Debug-Build/Modules/3.2.10/modulefiles/ 
+echo $HOSTNAME
+
+module load Framework/Matlab2019b
+matlab -batch 'array_example($SLURM_ARRAY_TASK_ID)'
